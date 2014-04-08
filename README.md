@@ -16,4 +16,4 @@ Current featurelist:
 - Stream pure text-files
 - Fixed wordspeed
 
-This is an Android Studio project. To try it out, set ut an Google Wear emulator, clone and run.
+This is an Android Studio project. To try it out, set up an Android Wear emulator, clone and run.
