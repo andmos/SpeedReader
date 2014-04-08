@@ -6,6 +6,8 @@ package com.throwit.speedreader;
 * http://www.codeproject.com/info/cpol10.aspx
 * http://www.codeproject.com/info/CPOL.zip
 *
+* Small modifications by Andreas Mosti
+*
 * License Preamble:
 * This License governs Your use of the Work. This License is intended to allow developers to use the Source
 * Code and Executable Files provided as part of the Work in any application in any form.
