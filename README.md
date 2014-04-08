@@ -15,4 +15,5 @@ Current featurelist:
 
 - Stream pure text-files
 - Fixed wordspeed
- 
+
+To try it out, set ut an Google Wear emulator, clone and run.
