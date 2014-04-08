@@ -17,7 +17,6 @@ public class MainActivity extends Activity {
 
 
     public TextView myTextView;
-    public RelativeLayout mainLayout;
     public String[] words;
     IFileBasedTextService textService;
     boolean isRunning;
@@ -30,6 +29,12 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        StartSpeedReader();
+
+    }
+
+    private void StartSpeedReader() {
 
         textService = new TextFileReader();
         myTextView = (TextView) findViewById(R.id.wordTextField);
@@ -58,7 +63,6 @@ public class MainActivity extends Activity {
                 }
         };
         timer.schedule(timerTask, 0, TIME_DELAY);
-
     }
 
     public void placeTouchField(){
@@ -67,11 +71,7 @@ public class MainActivity extends Activity {
 
             @Override
             public void onClick(View v) {
-                if(isRunning){
-                    isRunning = false;
-                }else{
-                    isRunning = true;
-                }
+                isRunning = !isRunning;
             }
 
         });
@@ -91,10 +91,7 @@ public class MainActivity extends Activity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
+        return id == R.id.action_settings || super.onOptionsItemSelected(item);
     }
 
 }
