@@ -11,6 +11,7 @@ import android.widget.TextView;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import static android.view.View.*;
 
 
 public class MainActivity extends Activity {
@@ -30,15 +31,18 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        StartSpeedReader();
+        StartSpeedReader("LoremIpsum.txt");
 
     }
 
-    private void StartSpeedReader() {
+    private void StartSpeedReader(String selectedFile) {
 
         textService = new TextFileReader();
         myTextView = (TextView) findViewById(R.id.wordTextField);
-        TextHandler textHandler = new TextHandler(textService, getApplicationContext(),"LoremIpsum.txt");
+
+
+
+        TextHandler textHandler = new TextHandler(textService, getApplicationContext(),selectedFile);
 
         words = textHandler.getWordsFromFileText();
 
@@ -53,7 +57,7 @@ public class MainActivity extends Activity {
                     @Override
                     public void run() {
 
-                        if(isRunning && counter <= words.length) {
+                        if(isRunning && counter < words.length) {
                             myTextView.setText(words[counter]);
                             counter ++;
                         }
@@ -67,7 +71,7 @@ public class MainActivity extends Activity {
 
     public void placeTouchField(){
         RelativeLayout rlayout = (RelativeLayout) findViewById(R.id.mainLayout);
-        rlayout.setOnClickListener(new View.OnClickListener() {
+        rlayout.setOnClickListener(new OnClickListener() {
 
             @Override
             public void onClick(View v) {

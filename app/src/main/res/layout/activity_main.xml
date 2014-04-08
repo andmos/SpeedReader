@@ -16,5 +16,6 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:id="@+id/wordTextField"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:text="@string/wordTextField" />
 </RelativeLayout>
