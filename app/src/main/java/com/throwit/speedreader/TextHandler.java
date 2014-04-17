@@ -5,6 +5,7 @@ import android.content.Context;
 /**
  * Created by andreasmosti on 07.04.14.
  */
+
 public class TextHandler {
 
        private IFileBasedTextService m_textSource;

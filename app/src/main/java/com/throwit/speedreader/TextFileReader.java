@@ -12,8 +12,6 @@ import java.io.InputStreamReader;
 public class TextFileReader implements IFileBasedTextService {
 
 
-
-
     public String getTextFromSource(Context context, String fileName) {
         try {
 

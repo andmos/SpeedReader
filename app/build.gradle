@@ -25,4 +25,7 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile files('libs/insta4j-client-1.0.2-SNAPSHOT.jar')
+    compile files('libs/insta4j-core-1.0.2-SNAPSHOT.jar')
+    compile files('libs/insta4j-simpleclient-1.0.2-SNAPSHOT.jar')
 }

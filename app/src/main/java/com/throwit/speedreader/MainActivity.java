@@ -40,8 +40,6 @@ public class MainActivity extends Activity {
         textService = new TextFileReader();
         myTextView = (TextView) findViewById(R.id.wordTextField);
 
-
-
         TextHandler textHandler = new TextHandler(textService, getApplicationContext(),selectedFile);
 
         words = textHandler.getWordsFromFileText();
